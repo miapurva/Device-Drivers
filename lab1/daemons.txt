@@ -1,0 +1,45 @@
+    amd - Auto Mount Daemon
+    anacron - Executed delayed cron tasks at boot time
+    apmd - Advanced Power Management Daemon
+    atd - Runs jobs queued using the at tool
+    autofs - Supports the automounter daemon allowing mount and unmount of devices on demand
+    crond - The task scheduler daemon
+    cupsd - CUPS printer daemon
+    dhcpd - Dynamic Host Configuration Protocol and Internet Bootstrap Protocol Server
+    ftpd - FTP Server Daemon
+    gated - routing daemon that handles multiple routing protocols and replaces routed and egpup
+    httpd - Web Server Daemon
+    inetd - Internet Superserver Daemon
+    imapd - An imap server daemon
+    lpd - Line Printer Daemon that manages printer spooling
+    memcached - In-memory distributed object caching daemon
+    mountd - mount daemon
+    mysql - Database server daemon
+    named - A DNS server daemon
+    nfsd - Network File Sharing Daemon
+    nfslock - Used to start and stop nfs file locking services
+    nmbd - Network Message Block Daemon
+    ntpd - Network Time Protocol service daemon
+    postfix - A mail transport agent used as a replacement for sendmail
+    postgresql - Database server daemon
+    routed - Manages routing tables
+    rpcbind - Remote Procedure Call Bind Daemon
+    sendmail - A mail transfer agent Daemon
+    smbd - Samba (an SMB Server) Daemon
+    smtpd - Simple Mail Transfer Protocol Daemon
+    snmpd - Simple Network Management Protocol Daemon
+    squid - A web page caching proxy server daemon
+    sshd - Secure Shell Server Daemon
+    syncd - Keeps the file systems synchronized with system memory
+    syslogd - System logging daemon
+    tcpd - Service wrapper restricts access to inetd based services through hosts.allow and hosts.deny
+    telnetd - Telnet Server daemon
+    vsftpd - Very Secure FTP Daemon
+    webmin - Web based administration server daemon
+    xinetd - Enhanced Internet Superserver Daemon
+    xntd - Network Time Server Daemon
+    ypbind - Find the server for an NIS domain and store the information in a file. 
+    vhand - Releases pages of memory for use by other processes. Also known as the "page stealing daemon" 
+    xfsd  - Serve X11 fonts to remote clients. 
+    biod - Works in cooperation with the remote nfsd to handle client NFS requests. 
+    
