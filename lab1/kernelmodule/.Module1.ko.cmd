@@ -1,0 +1,1 @@
+cmd_/home/apurva/Desktop/DD/lab1/kernelmodule/Module1.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/apurva/Desktop/DD/lab1/kernelmodule/Module1.ko /home/apurva/Desktop/DD/lab1/kernelmodule/Module1.o /home/apurva/Desktop/DD/lab1/kernelmodule/Module1.mod.o ;  true

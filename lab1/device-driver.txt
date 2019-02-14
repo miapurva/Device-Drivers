@@ -1,0 +1,124 @@
+Module                  Size  Used by
+binfmt_misc            20480  1
+ipt_MASQUERADE         16384  1
+nf_nat_masquerade_ipv4    16384  1 ipt_MASQUERADE
+xt_conntrack           16384  1
+ipt_REJECT             16384  2
+nf_reject_ipv4         16384  1 ipt_REJECT
+xt_tcpudp              16384  4
+iptable_filter         16384  1
+nf_nat_h323            20480  0
+nf_conntrack_h323      73728  1 nf_nat_h323
+nf_nat_pptp            16384  0
+nf_nat_proto_gre       16384  1 nf_nat_pptp
+nf_conntrack_pptp      16384  1 nf_nat_pptp
+nf_conntrack_proto_gre    16384  1 nf_conntrack_pptp
+nf_nat_tftp            16384  0
+nf_conntrack_tftp      16384  1 nf_nat_tftp
+nf_nat_sip             20480  0
+nf_conntrack_sip       28672  1 nf_nat_sip
+nf_nat_irc             16384  0
+nf_conntrack_irc       16384  1 nf_nat_irc
+nf_nat_ftp             16384  0
+nf_conntrack_ftp       20480  1 nf_nat_ftp
+iptable_nat            16384  1
+nf_conntrack_ipv4      16384  3
+nf_defrag_ipv4         16384  1 nf_conntrack_ipv4
+nf_nat_ipv4            16384  1 iptable_nat
+nf_nat                 32768  9 nf_nat_masquerade_ipv4,nf_nat_irc,nf_nat_ftp,nf_nat_ipv4,nf_nat_tftp,nf_nat_pptp,nf_nat_h323,nf_nat_proto_gre,nf_nat_sip
+nf_conntrack          131072  19 xt_conntrack,nf_nat_masquerade_ipv4,nf_nat_irc,nf_conntrack_ipv4,nf_nat,nf_conntrack_tftp,nf_nat_ftp,nf_conntrack_pptp,ipt_MASQUERADE,nf_nat_ipv4,nf_nat_tftp,nf_conntrack_sip,nf_conntrack_h323,nf_nat_pptp,nf_conntrack_irc,nf_conntrack_proto_gre,nf_conntrack_ftp,nf_nat_h323,nf_nat_sip
+libcrc32c              16384  2 nf_conntrack,nf_nat
+rfcomm                 77824  16
+cmac                   16384  1
+bnep                   20480  2
+nls_iso8859_1          16384  1
+nvidia_uvm             36864  0
+nvidia              10559488  93 nvidia_uvm
+wl                   6447104  0
+input_leds             16384  0
+hp_wmi                 16384  0
+sparse_keymap          16384  1 hp_wmi
+btusb                  45056  0
+uvcvideo               86016  0
+btrtl                  16384  1 btusb
+videobuf2_vmalloc      16384  1 uvcvideo
+btbcm                  16384  1 btusb
+videobuf2_memops       16384  1 videobuf2_vmalloc
+videobuf2_v4l2         24576  1 uvcvideo
+btintel                16384  1 btusb
+videobuf2_core         40960  2 videobuf2_v4l2,uvcvideo
+bluetooth             548864  43 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+videodev              184320  3 videobuf2_core,videobuf2_v4l2,uvcvideo
+ecdh_generic           24576  2 bluetooth
+media                  40960  2 videodev,uvcvideo
+joydev                 24576  0
+wmi_bmof               16384  0
+serio_raw              16384  0
+snd_hda_codec_hdmi     49152  1
+intel_rapl             20480  0
+x86_pkg_temp_thermal    16384  0
+intel_powerclamp       16384  0
+coretemp               16384  0
+kvm_intel             212992  0
+kvm                   598016  1 kvm_intel
+irqbypass              16384  1 kvm
+crct10dif_pclmul       16384  0
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+pcbc                   16384  0
+snd_hda_codec_realtek   106496  1
+aesni_intel           188416  2
+snd_hda_codec_generic    73728  1 snd_hda_codec_realtek
+aes_x86_64             20480  1 aesni_intel
+crypto_simd            16384  1 aesni_intel
+glue_helper            16384  1 aesni_intel
+cryptd                 24576  3 crypto_simd,ghash_clmulni_intel,aesni_intel
+intel_cstate           20480  0
+intel_rapl_perf        16384  0
+snd_hda_intel          40960  8
+snd_hda_codec         126976  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+snd_hda_core           81920  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+snd_hwdep              20480  1 snd_hda_codec
+snd_pcm                98304  4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+snd_seq_midi           16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+mac_hid                16384  0
+snd_rawmidi            32768  1 snd_seq_midi
+snd_seq                65536  2 snd_seq_midi,snd_seq_midi_event
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+snd_timer              32768  2 snd_seq,snd_pcm
+mei_me                 40960  0
+lpc_ich                24576  0
+cfg80211              622592  1 wl
+mei                    90112  1 mei_me
+snd                    81920  27 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_pcm,snd_rawmidi
+shpchp                 36864  0
+soundcore              16384  1 snd
+hp_accel               28672  0
+lis3lv02d              20480  1 hp_accel
+wmi                    24576  2 hp_wmi,wmi_bmof
+input_polldev          16384  1 lis3lv02d
+hp_wireless            16384  0
+acpi_pad              180224  0
+sch_fq_codel           20480  3
+parport_pc             36864  0
+ppdev                  20480  0
+lp                     20480  0
+parport                49152  3 parport_pc,lp,ppdev
+ip_tables              28672  2 iptable_filter,iptable_nat
+x_tables               40960  6 xt_conntrack,iptable_filter,xt_tcpudp,ipt_MASQUERADE,ipt_REJECT,ip_tables
+autofs4                40960  2
+i915                 1617920  4
+i2c_algo_bit           16384  1 i915
+drm_kms_helper        172032  1 i915
+psmouse               147456  0
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+ahci                   40960  4
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+libahci                32768  1 ahci
+drm                   401408  10 drm_kms_helper,nvidia,i915
+r8169                  86016  0
+mii                    16384  1 r8169
+video                  45056  1 i915

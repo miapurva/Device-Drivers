@@ -42,4 +42,3 @@
     vhand - Releases pages of memory for use by other processes. Also known as the "page stealing daemon" 
     xfsd  - Serve X11 fonts to remote clients. 
     biod - Works in cooperation with the remote nfsd to handle client NFS requests. 
-    
