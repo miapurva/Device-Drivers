@@ -1,51 +1,40 @@
-#!/bin/bash
-# Counting the number of lines in a list of files
-# function version
-
-# function storing list of all files in variable files
-get_files () {
-  files="`ls *.[sh]`"
-}
-
-# function counting the number of lines in a file
-count_lines () {
-  f=$1  # 1st argument is filename
-  l=`wc -l $f | sed 's/^\([0-9]*\).*$/\1/'` # number of lines
-}
-
-# the script should be called without arguments
-if [ $# -ge 1 ]
+# Bash Program to find 
+# A to the power B 
+# Subroutine to find A 
+# to the power B 
+pow() 
+{ 
+# value of A 
+a=$1 
+# value of B 
+b=$2 
+# c to count counter 
+c=1 
+# res to store the result 
+res=1 
+# 
+if((b==0)); 
 then
-  echo "Usage: $0 "
-  exit 1
+  res=1 
 fi
 
-# split by newline
-IFS=$'\012'
+if((a==0)); 
+then
+  res=0 
+fi
 
-echo "$0 counts the lines of code" 
-# don't forget to initialise!
-l=0
-n=0
-s=0
-# call a function to get a list of files
-get_files
-# iterate over this list
-for f in $files
-do
-        # call a function to count the lines
-        count_lines $f
-        echo "$f: $l"loc
-  # store filename in an array
-  file[$n]=$f
-  # store number of lines in an array
-  lines[$n]=$l
-  # increase counter
-        n=$[ $n + 1 ]
-  # increase sum of all lines
-        s=$[ $s + $l ]
-done
+if((a >= 1 && b >= 1)); 
+then
+  while((c <= b)) 
+  do
+  res=$((res * a)) 
+  c=$((c + 1)) 
+  done
+fi
 
-echo "$n files in total, with $s lines in total"
-i=5
-echo "The $i-th file was ${file[$i]} with ${lines[$i]} lines"
+# Display the result 
+echo "$1 to the power $2 is $res"
+} 
+# Driver Code 
+# calling the pow function 
+pow $1 $2 
