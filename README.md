@@ -1,16 +1,16 @@
 # Device-Drivers
 1. To run keylogger program, type the following commands:
 
-make
+  make
 
-sudo insmod keylogger.ko
+  sudo insmod keylogger.ko
 
-dmesg
+  dmesg
   
 2. To run kernel module prog:
 
-make
+  make
 
-sudo insmod Module1.ko
+  sudo insmod Module1.ko
 
-dmesg
+  dmesg
