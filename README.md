@@ -36,8 +36,8 @@
     sudo rmmod query_ioctl.ko
 
 6. Mouse device driver:
-
-	cc 1mouse.c -lX11
+	Keep the "graphics.h" file in the same folder where your target file is.
+	cc mouse.c -lX11
 	./a.out
 
 7. Two systems with same IP address:
