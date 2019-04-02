@@ -1,0 +1,66 @@
+apurva@apurvakulwe-HP-Pavilion-15-Notebook-PC:~/Desktop/DD/lab1$ xinput
+⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
+⎜   ↳ SynPS/2 Synaptics TouchPad              	id=12	[slave  pointer  (2)]
+⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
+    ↳ Power Button                            	id=6	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=7	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=8	[slave  keyboard (3)]
+    ↳ Power Button                            	id=9	[slave  keyboard (3)]
+    ↳ HP Truevision HD: HP Truevision         	id=10	[slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard            	id=11	[slave  keyboard (3)]
+    ↳ HP WMI hotkeys                          	id=13	[slave  keyboard (3)]
+    ↳ HP Wireless hotkeys                     	id=14	[slave  keyboard (3)]
+
+-----------------------------------------------------------------------------
+Now i attache my second mouse to the usb-port
+-----------------------------------------------------------------------------
+apurva@apurvakulwe-HP-Pavilion-15-Notebook-PC:~/Desktop/DD/lab1$ xinput
+⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
+⎜   ↳ SynPS/2 Synaptics TouchPad              	id=12	[slave  pointer  (2)]
+⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
+    ↳ Power Button                            	id=6	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=7	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=8	[slave  keyboard (3)]
+    ↳ Power Button                            	id=9	[slave  keyboard (3)]
+    ↳ HP Truevision HD: HP Truevision         	id=10	[slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard            	id=11	[slave  keyboard (3)]
+    ↳ HP WMI hotkeys                          	id=13	[slave  keyboard (3)]
+    ↳ HP Wireless hotkeys                     	id=14	[slave  keyboard (3)]
+-----------------------------------------------------------------------------
+At this point we have still one cursor, controlled by both mouses
+Now  I create a new master
+-----------------------------------------------------------------------------
+apurva@apurvakulwe-HP-Pavilion-15-Notebook-PC:~/Desktop/DD/lab1$ xinput create-master "newmouse" 
+apurva@apurvakulwe-HP-Pavilion-15-Notebook-PC:~/Desktop/DD/lab1$ xinput
+⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
+⎜   ↳ SynPS/2 Synaptics TouchPad              	id=12	[slave  pointer  (2)]
+⎜   ↳ USB Optical Mouse                       	id=15	[slave  pointer  (2)]
+⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
+    ↳ Power Button                            	id=6	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=7	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=8	[slave  keyboard (3)]
+    ↳ Power Button                            	id=9	[slave  keyboard (3)]
+    ↳ HP Truevision HD: HP Truevision         	id=10	[slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard            	id=11	[slave  keyboard (3)]
+    ↳ HP WMI hotkeys                          	id=13	[slave  keyboard (3)]
+    ↳ HP Wireless hotkeys                     	id=14	[slave  keyboard (3)]
+⎡ newmouse pointer                        	id=16	[master pointer  (17)]
+⎜   ↳ newmouse XTEST pointer                  	id=18	[slave  pointer  (16)]
+⎣ newmouse keyboard                       	id=17	[master keyboard (16)]
+    ↳ newmouse XTEST keyboard                 	id=19	[slave  keyboard (17)]
+
+------------------------------------------------------------------------------
+At this moment we have a second cursor, but only one curser is controlled by both mouses
+Now I bind the mouse to the new cursor
+------------------------------------------------------------------------------    
+
+apurva@apurvakulwe-HP-Pavilion-15-Notebook-PC:~/Desktop/DD/lab1$ xinput reattach "15" "16"
+------------------------------------------------------------------------------    
+Now we have each of the two cursors controlled by it's own mouse!!!!
+------------------------------------------------------------------------------    
